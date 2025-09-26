@@ -1,0 +1,64 @@
+
+
+> @vben/backend-mock@0.0.1 build /Users/midoks/Desktop/mwdev/midoks/fastcdn/fastcdn-web/apps/backend-mock
+> nitro build
+
+[32m✔[39m Generated public [36m.output/public[39m                                                                                                      [90mnitro[39m [90m19:25:53[39m
+[36mℹ[39m Building Nitro Server (preset: [36mnode-server[39m, compatibility date: [36m2025-09-14[39m)                                                          [90mnitro[39m [90m19:25:53[39m
+[32m✔[39m Nitro Server built                                                                                                                   [90mnitro[39m [90m19:25:58[39m
+[90m  ├─ .output/server/chunks/_/cookie-utils.mjs (700 B)[39m[90m (317 B gzip)[39m
+[90m  ├─ .output/server/chunks/_/cookie-utils.mjs.map (612 B)[39m[90m (232 B gzip)[39m
+[90m  ├─ .output/server/chunks/_/jwt-utils.mjs (10.1 kB)[39m[90m (2.24 kB gzip)[39m
+[90m  ├─ .output/server/chunks/_/jwt-utils.mjs.map (9.15 kB)[39m[90m (1.44 kB gzip)[39m
+[90m  ├─ .output/server/chunks/nitro/nitro.mjs (163 kB)[39m[90m (39.6 kB gzip)[39m
+[90m  ├─ .output/server/chunks/nitro/nitro.mjs.map (5.2 kB)[39m[90m (970 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/_..._.mjs (674 B)[39m[90m (328 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/_..._.mjs.map (240 B)[39m[90m (150 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/codes.mjs (793 B)[39m[90m (397 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/codes.mjs.map (518 B)[39m[90m (228 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/login.post.mjs (1.42 kB)[39m[90m (582 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/login.post.mjs.map (827 B)[39m[90m (290 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/logout.post.mjs (691 B)[39m[90m (316 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/logout.post.mjs.map (376 B)[39m[90m (198 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/refresh.post.mjs (1.21 kB)[39m[90m (457 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/auth/refresh.post.mjs.map (719 B)[39m[90m (258 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/demo/bigint.mjs (1.21 kB)[39m[90m (497 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/demo/bigint.mjs.map (501 B)[39m[90m (210 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/menu/all.mjs (793 B)[39m[90m (401 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/menu/all.mjs.map (514 B)[39m[90m (222 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/create-api-node.post.mjs (1.37 kB)[39m[90m (595 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/create-api-node.post.mjs.map (1.07 kB)[39m[90m (296 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/install.post.mjs (1.94 kB)[39m[90m (713 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/install.post.mjs.map (1.38 kB)[39m[90m (326 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/test-database.post.mjs (1.29 kB)[39m[90m (522 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/setup/test-database.post.mjs.map (894 B)[39m[90m (276 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/status.mjs (520 B)[39m[90m (271 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/status.mjs.map (353 B)[39m[90m (173 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/_id_.delete.mjs (683 B)[39m[90m (335 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/_id_.delete.mjs.map (385 B)[39m[90m (204 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/_id_.put.mjs (674 B)[39m[90m (333 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/_id_.put.mjs.map (379 B)[39m[90m (202 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/list.mjs (1.99 kB)[39m[90m (826 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/dept/list.mjs.map (1.85 kB)[39m[90m (451 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/list.mjs (661 B)[39m[90m (327 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/list.mjs.map (340 B)[39m[90m (188 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/name-exists.mjs (1.03 kB)[39m[90m (485 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/name-exists.mjs.map (801 B)[39m[90m (293 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/path-exists.mjs (1.03 kB)[39m[90m (490 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/menu/path-exists.mjs.map (826 B)[39m[90m (297 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/role/list.mjs (2.54 kB)[39m[90m (999 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/system/role/list.mjs.map (2.51 kB)[39m[90m (550 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/table/list.mjs (2.49 kB)[39m[90m (958 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/table/list.mjs.map (2.54 kB)[39m[90m (498 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/test.get.mjs (364 B)[39m[90m (205 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/test.get.mjs.map (178 B)[39m[90m (133 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/test.post.mjs (368 B)[39m[90m (206 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/test.post.mjs.map (180 B)[39m[90m (133 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/upload.mjs (696 B)[39m[90m (355 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/upload.mjs.map (356 B)[39m[90m (191 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/user/info.mjs (622 B)[39m[90m (302 B gzip)[39m
+[90m  ├─ .output/server/chunks/routes/api/user/info.mjs.map (330 B)[39m[90m (185 B gzip)[39m
+[90m  ├─ .output/server/index.mjs (353 B)[39m[90m (203 B gzip)[39m
+[90m  └─ .output/server/package.json (602 B)[39m[90m (308 B gzip)[39m
+[36mΣ Total size:[39m 4.31 MB (1.07 MB gzip)
+[32m✔[39m You can preview this build using [36mnode .output/server/index.mjs[39m                                                                       [90mnitro[39m [90m19:25:58[39m

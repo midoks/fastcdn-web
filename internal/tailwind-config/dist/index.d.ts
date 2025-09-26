@@ -1,0 +1,2 @@
+export * from "/Users/midoks/Desktop/mwdev/midoks/fastcdn-web/internal/tailwind-config/src/index.js";
+export { default } from "/Users/midoks/Desktop/mwdev/midoks/fastcdn-web/internal/tailwind-config/src/index.js";
