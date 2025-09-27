@@ -33,56 +33,53 @@ export const useAuthStore = defineStore('auth', () => {
         let userInfo: null | UserInfo = null;
         console.log("123123:", params);
 
-        let a = await loginApi(params);
-
-        console.log("loginApi:", a);
-
         try {
-            loginLoading.value = true;
-            const { token  } = await loginApi(params);
+            const response = await loginApi(params);
 
-            // console.log("accessToken:",accessToken);
-            console.log("token:",token);
+            console.log("response:", response);
+            // 直接使用响应对象，不解构
+            console.log("完整响应:", response);
 
-            // 如果成功获取到 accessToken
-            // if (accessToken) {
-            //     // 将 accessToken 存储到 accessStore 中
-            //     accessStore.setAccessToken(accessToken);
+            // 从控制台可以看到token直接在response中
+            const token = response;
+            
+            if (token) {
+                // 将 token 存储到 accessStore 中
+                accessStore.setAccessToken(token);
 
-            //     // 获取用户信息并存储到 accessStore 中
-            //     const [fetchUserInfoResult, accessCodes] = await Promise.all([
-            //         fetchUserInfo(),
-            //         getAccessCodesApi(),
-            //     ]);
+                // 获取用户信息并存储到 accessStore 中
+                const [fetchUserInfoResult, accessCodes] = await Promise.all([
+                    fetchUserInfo(),
+                    getAccessCodesApi(),
+                ]);
 
-            //     userInfo = fetchUserInfoResult;
+                userInfo = fetchUserInfoResult;
 
-            //     userStore.setUserInfo(userInfo);
-            //     accessStore.setAccessCodes(accessCodes);
+                userStore.setUserInfo(userInfo);
+                accessStore.setAccessCodes(accessCodes);
 
-            //     if (accessStore.loginExpired) {
-            //         accessStore.setLoginExpired(false);
-            //     } else {
-            //         onSuccess
-            //             ? await onSuccess?.()
-            //             : await router.push(
-            //                   userInfo.homePath ||
-            //                       preferences.app.defaultHomePath,
-            //               );
-            //     }
+                if (accessStore.loginExpired) {
+                    accessStore.setLoginExpired(false);
+                } else {
+                    onSuccess
+                        ? await onSuccess?.()
+                        : await router.push(
+                              userInfo.homePath ||
+                                  preferences.app.defaultHomePath,
+                          );
+                }
 
-            //     if (userInfo?.realName) {
-            //         notification.success({
-            //             content: $t('authentication.loginSuccess'),
-            //             description: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
-            //             duration: 3000,
-            //         });
-            //     }
-            // }
+                if (userInfo?.realName) {
+                    notification.success({
+                        content: $t('authentication.loginSuccess'),
+                        description: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
+                        duration: 3000,
+                    });
+                }
+            }
         } catch (error: any) {
             console.error('authLogin:', error);
         } finally {
-            console.error('loginLoading???');
             loginLoading.value = false;
         }
         userInfo = {

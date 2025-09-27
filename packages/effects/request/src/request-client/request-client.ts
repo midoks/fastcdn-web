@@ -146,8 +146,10 @@ class RequestClient {
                       }
                     : {}),
             });
-            return response as T;
+            console.log("response:", response);
+            return response && response.data ? response.data : {} as T;
         } catch (error: any) {
+            console.log("error:",error);
             throw error.response ? error.response.data : error;
         }
     }

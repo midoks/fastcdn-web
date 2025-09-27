@@ -9,8 +9,9 @@ export namespace AuthApi {
 
     /** 登录接口返回值 */
     export interface LoginResult {
-        // accessToken: string;
         token:string;
+        message: string;
+        code: number;
     }
 
     export interface RefreshTokenResult {
@@ -23,14 +24,18 @@ export namespace AuthApi {
  * 登录
  */
 export async function loginApi(data: AuthApi.LoginParams) {
-    return requestClient.post<AuthApi.LoginResult>('/auth/login', data);
+    // 使用baseRequestClient直接获取原始响应，不经过拦截器处理
+    const response = await baseRequestClient.post<AuthApi.LoginResult>('/api/auth/login', data);
+    console.log('原始登录响应:', response);
+    // 返回token字段
+    return response;
 }
 
 /**
  * 刷新accessToken
  */
 export async function refreshTokenApi() {
-    return baseRequestClient.post<AuthApi.RefreshTokenResult>('/auth/refresh', {
+    return baseRequestClient.post<AuthApi.RefreshTokenResult>('/api/auth/refresh', {
         withCredentials: true,
     });
 }
@@ -39,7 +44,7 @@ export async function refreshTokenApi() {
  * 退出登录
  */
 export async function logoutApi() {
-    return baseRequestClient.post('/auth/logout', {
+    return baseRequestClient.post('/api/auth/logout', {
         withCredentials: true,
     });
 }
@@ -48,5 +53,5 @@ export async function logoutApi() {
  * 获取用户权限码
  */
 export async function getAccessCodesApi() {
-    return requestClient.get<string[]>('/auth/codes');
+    return requestClient.get<string[]>('/api/auth/codes');
 }
