@@ -36,3 +36,9 @@ yarn-error.log*
 next-env.d.ts
 /apps/web-naive/node_modules
 /.turbo
+/packages/@core/base/design/.turbo
+/packages/@core/base/shared/.turbo
+/packages/@core/base/shared/.turbo
+/packages/@core/base/typings/.turbo
+/apps/web-naive/.turbo
+/packages/@core/composables/.turbo
