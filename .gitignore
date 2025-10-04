@@ -35,3 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /apps/web-naive/node_modules
+/.turbo

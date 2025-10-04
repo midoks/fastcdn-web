@@ -1,1 +1,1 @@
-export * from "/Users/midoks/Desktop/mwdev/midoks/fastcdn-web/packages/@core/base/shared/src/store.js";
+export * from '@tanstack/vue-store';
